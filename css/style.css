@@ -1,0 +1,39 @@
+/* ---------- GPS button (visual ao lado do CEP) ---------- */
+#btn-gps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- sugestões de rua (autocomplete) ---------- */
+#sugestoes-rua {
+  top: 100%;
+  left: 0;
+  z-index: 2000;
+  max-height: 220px;
+  overflow-y: auto;
+  display: none; /* ativado por JS quando houver sugestões */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* item de sugestão */
+.sugestao-item {
+  cursor: pointer;
+}
+
+/* lista de opções de CEP */
+#lista-opcoes-cep .opcao-cep {
+  background: #f8f9fa;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+#lista-opcoes-cep .opcao-cep:hover { background: #e9ecef; }
+
+/* popup (modal é do bootstrap; este CSS é apenas para fallback) */
+.popup { display:none; }
+
+/* estilo lista de endereços cadastrados */
+#lista-ceps .end-item { margin-bottom: 10px; }
+.btn-delete { background:#dc3545; color:#fff; border:none; padding:4px 8px; border-radius:4px; }
